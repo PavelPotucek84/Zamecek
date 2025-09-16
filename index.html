@@ -100,122 +100,95 @@ main{max-width:1100px;margin:-6vh auto 3rem;padding:0 1rem;position:relative}
 
   <section id="menu" class="card">
   <h2>Polední menu</h2>
-<section class="weekly-menu" style="max-width:900px;margin:0 auto;font-family:system-ui, Arial, sans-serif;">
-  <h2 style="text-align:center;margin:0 0 .25rem 0;">Týdenní nabídka</h2>
-  <p style="text-align:center;margin:.25rem 0 1rem 0;opacity:.8;">9. 9. – 12. 9. 2025</p>
+<section id="weekly-menu" class="zamecek-weekly">
+  <style>
+    .zamecek-weekly{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;margin:1.5rem 0}
+    .zamecek-weekly .wm-wrap{display:grid;gap:1.25rem}
+    @media (min-width: 900px){.zamecek-weekly .wm-wrap{grid-template-columns:1fr 1fr}}
+    .zamecek-weekly h2{margin:0 0 .25rem;font-size:1.6rem}
+    .zamecek-weekly .dates{color:#666;margin-bottom:.75rem;font-size:.95rem}
+    .zamecek-weekly h3{margin:1rem 0 .5rem;font-size:1.2rem}
+    .zamecek-weekly ul{list-style:none;margin:0;padding:0}
+    .zamecek-weekly li{padding:.4rem 0;border-bottom:1px dashed #e5e5e5;display:flex;justify-content:space-between;gap:.75rem}
+    .zamecek-weekly li:last-child{border-bottom:none}
+    .zamecek-weekly .item{flex:1}
+    .zamecek-weekly .price{white-space:nowrap;color:#111}
+    .zamecek-weekly .panel{padding:1rem;border:1px solid #eee;border-radius:.75rem;background:#fff}
+    .zamecek-weekly .lang{font-weight:600;letter-spacing:.02em;margin-bottom:.25rem;color:#2b2b2b}
+  </style>
 
-  <!-- Úterý -->
-  <article style="padding:12px 0;border-top:1px solid #ddd;">
-    <h3 style="margin:0 0 .5rem 0;">Úterý / Dienstag</h3>
-    <ul style="list-style:none;padding:0;margin:0;">
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Hovězí vývar s játrovými knedlíčky</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Rinderbrühe mit Leberknödelchen</div>
-        </div>
-        <div>39,-</div>
-      </li>
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Kuřecí nudličky na žampionech, rýže</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Hähnchenstreifen mit Champignons, Reis</div>
-        </div>
-        <div>149,-</div>
-      </li>
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Smažený vepřový řízek, bramborový salát</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Paniertes Schweineschnitzel, Kartoffelsalat</div>
-        </div>
-        <div>149,-</div>
-      </li>
-    </ul>
-  </article>
+  <div class="wm-wrap">
 
-  <!-- Středa -->
-  <article style="padding:12px 0;border-top:1px solid #ddd;">
-    <h3 style="margin:0 0 .5rem 0;">Středa / Mittwoch</h3>
-    <ul style="list-style:none;padding:0;margin:0;">
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Frankfurtská (polévka)</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Frankfurter Suppe</div>
-        </div>
-        <div>39,-</div>
-      </li>
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Plněná bramborová roláda uzeným masem, červené zelí, cibulka</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Gefüllte Kartoffelroulade mit Räucherfleisch, Rotkohl, Zwiebel</div>
-        </div>
-        <div>149,-</div>
-      </li>
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Kuřecí rarášci, brambory, tatarská omáčka</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Hähnchen-Nuggets, Kartoffeln, Tatarensauce</div>
-        </div>
-        <div>149,-</div>
-      </li>
-    </ul>
-  </article>
+    <!-- Čeština -->
+    <article class="panel">
+      <div class="lang">Týdenní nabídka</div>
+      <h2>Zámeček – Týdenní nabídka</h2>
+      <div class="dates">16.&nbsp;9.&nbsp;–&nbsp;19.&nbsp;9.&nbsp;2025</div>
 
-  <!-- Čtvrtek -->
-  <article style="padding:12px 0;border-top:1px solid #ddd;">
-    <h3 style="margin:0 0 .5rem 0;">Čtvrtek / Donnerstag</h3>
-    <ul style="list-style:none;padding:0;margin:0;">
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Kuřecí vývar s kapáním</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Hühnerbrühe mit Eierflocken</div>
-        </div>
-        <div>39,-</div>
-      </li>
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Smažená treska, bramborová kaše, rajčatový salát</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Gebackener Kabeljau, Kartoffelpüree, Tomatensalat</div>
-        </div>
-        <div>149,-</div>
-      </li>
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Krkovička na cibulce, šťouchaný brambor</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Schweinenacken mit Zwiebeln, gestampfte Kartoffeln</div>
-        </div>
-        <div>149,-</div>
-      </li>
-    </ul>
-  </article>
+      <h3>Úterý</h3>
+      <ul>
+        <li><span class="item">Brokolicová polévka</span><span class="price">39&nbsp;Kč</span></li>
+        <li><span class="item">Řezanka, rýže</span><span class="price">149&nbsp;Kč</span></li>
+        <li><span class="item">Pečené kuřecí stehno, bramborová kaše</span><span class="price">149&nbsp;Kč</span></li>
+      </ul>
 
-  <!-- Pátek -->
-  <article style="padding:12px 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;">
-    <h3 style="margin:0 0 .5rem 0;">Pátek / Freitag</h3>
-    <ul style="list-style:none;padding:0;margin:0;">
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Rajská polévka s těstovinou</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Tomatensuppe mit Nudeln</div>
-        </div>
-        <div>39,-</div>
-      </li>
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Rozlítaný španělský ptáček, houskový knedlík / rýže</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Zerlegter „Spanischer Vogel“ (Rindfleisch in Sauce), Semmelknödel / Reis</div>
-        </div>
-        <div>159,-</div>
-      </li>
-      <li style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;">
-        <div>
-          <div><strong>Smažený sýr, brambory, tatarská omáčka</strong></div>
-          <div style="font-size:.95em;opacity:.85;">Gebackener Käse, Kartoffeln, Tatarensauce</div>
-        </div>
-        <div>149,-</div>
-      </li>
-    </ul>
-  </article>
-</section>
+      <h3>Středa</h3>
+      <ul>
+        <li><span class="item">Hovězí vývar s nudlemi</span><span class="price">39&nbsp;Kč</span></li>
+        <li><span class="item">Smažený květák, brambory, tatarská omáčka</span><span class="price">149&nbsp;Kč</span></li>
+        <li><span class="item">Plněný bramborák pikantní směsí</span><span class="price">149&nbsp;Kč</span></li>
+      </ul>
+
+      <h3>Čtvrtek</h3>
+      <ul>
+        <li><span class="item">Bramboračka</span><span class="price">39&nbsp;Kč</span></li>
+        <li><span class="item">Vepřová pečeně, bílé zelí, houskový knedlík</span><span class="price">149&nbsp;Kč</span></li>
+        <li><span class="item">Karbanátek, bramborová kaše, kyselá okurka</span><span class="price">149&nbsp;Kč</span></li>
+      </ul>
+
+      <h3>Pátek</h3>
+      <ul>
+        <li><span class="item">Kulajda</span><span class="price">39&nbsp;Kč</span></li>
+        <li><span class="item">Maďarský guláš, houskový knedlík</span><span class="price">159&nbsp;Kč</span></li>
+        <li><span class="item">Vinná klobása, bramborový salát</span><span class="price">149&nbsp;Kč</span></li>
+      </ul>
+    </article>
+
+    <!-- Deutsch -->
+    <article class="panel">
+      <div class="lang">Wochenangebot</div>
+      <h2>Zámeček – Wochenangebot</h2>
+      <div class="dates">16.&nbsp;9.&nbsp;–&nbsp;19.&nbsp;9.&nbsp;2025</div>
+
+      <h3>Dienstag</h3>
+      <ul>
+        <li><span class="item">Brokkolisuppe</span><span class="price">39&nbsp;CZK</span></li>
+        <li><span class="item">Eiernudeln mit Reis</span><span class="price">149&nbsp;CZK</span></li>
+        <li><span class="item">Gebackene Hähnchenkeule mit Kartoffelpüree</span><span class="price">149&nbsp;CZK</span></li>
+      </ul>
+
+      <h3>Mittwoch</h3>
+      <ul>
+        <li><span class="item">Rinderkraftbrühe mit Nudeln</span><span class="price">39&nbsp;CZK</span></li>
+        <li><span class="item">Panierter Blumenkohl, Kartoffeln, Tartarsauce</span><span class="price">149&nbsp;CZK</span></li>
+        <li><span class="item">Gefüllter Kartoffelpuffer mit pikanter Mischung</span><span class="price">149&nbsp;CZK</span></li>
+      </ul>
+
+      <h3>Donnerstag</h3>
+      <ul>
+        <li><span class="item">Kartoffelsuppe</span><span class="price">39&nbsp;CZK</span></li>
+        <li><span class="item">Schweinebraten, Weißkohl, Semmelknödel</span><span class="price">149&nbsp;CZK</span></li>
+        <li><span class="item">Frikadelle, Kartoffelpüree, saure Gurke</span><span class="price">149&nbsp;CZK</span></li>
+      </ul>
+
+      <h3>Freitag</h3>
+      <ul>
+        <li><span class="item">Kulajda (tschechische Pilzsuppe)</span><span class="price">39&nbsp;CZK</span></li>
+        <li><span class="item">Ungarisches Gulasch mit Semmelknödel</span><span class="price">159&nbsp;CZK</span></li>
+        <li><span class="item">Weinknacker mit Kartoffelsalat</span><span class="price">149&nbsp;CZK</span></li>
+      </ul>
+    </article>
+
   </div>
 </section>
   <div class="category">

@@ -27,8 +27,12 @@ fetch('assets/zamecek-hero.jpg')
   .then(function(r){return r.text();})
   .then(function(data){
     var clean=data.replace(/\s+/g,'');
-    if(clean.indexOf('/9j/')===0){
-      document.querySelector('.hero').style.backgroundImage="url('data:image/jpeg;base64,"+clean+"')";
+    var jpegBase64=clean;
+    if(clean.indexOf('Lzlq')===0){
+      jpegBase64=atob(clean);
+    }
+    if(jpegBase64.indexOf('/9j/')===0){
+      document.querySelector('.hero').style.backgroundImage="url('data:image/jpeg;base64,"+jpegBase64+"')";
     }
   })
   .catch(function(){});

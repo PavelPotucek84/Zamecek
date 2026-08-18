@@ -23,16 +23,12 @@
 <section id="kontakt"><div class="wrap contact-grid"><div class="contact-card"><div class="kicker">Kontakt</div><h2>Kde nás najdete</h2><p>Restaurace Zámeček, Jiříkovská 1070/83, 408 01 Rumburk.</p><div class="contact-list"><div class="contact-item"><strong>Telefon</strong><a href="tel:+420412334500">+420 412 334 500</a></div><div class="contact-item"><strong>E-mail</strong><a href="mailto:restauracezamecek@email.cz">restauracezamecek@email.cz</a></div><div class="contact-item"><strong>Adresa</strong><span>Jiříkovská 1070/83, 408 01 Rumburk</span></div></div></div><iframe title="Mapa Restaurace Zámeček" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Ji%C5%99%C3%ADkovsk%C3%A1%201070%2F83%2C%20Rumburk&output=embed"></iframe></div></section>
 </main><footer><div class="wrap footer-row"><span>© 2026 Restaurace Zámeček</span><span>Rumburk · česká kuchyně · rezervace · jídlo s sebou</span></div></footer>
 <script>
-fetch('assets/zamecek-hero.jpg')
-  .then(function(r){return r.text();})
-  .then(function(data){
-    var clean=data.replace(/\s+/g,'');
-    var jpegBase64=clean;
-    if(clean.indexOf('Lzlq')===0){
-      jpegBase64=atob(clean);
-    }
-    if(jpegBase64.indexOf('/9j/')===0){
-      document.querySelector('.hero').style.backgroundImage="url('data:image/jpeg;base64,"+jpegBase64+"')";
+fetch('index_zamecek_fullbuilding.html')
+  .then(function(r){ if(!r.ok) throw new Error('backup not found'); return r.text(); })
+  .then(function(html){
+    var match = html.match(/data:image\/jpeg;base64,([^'\")]+)/i);
+    if(match && match[1]){
+      document.querySelector('.hero').style.backgroundImage = "url('data:image/jpeg;base64," + match[1] + "')";
     }
   })
   .catch(function(){});
